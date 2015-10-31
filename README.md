@@ -12,6 +12,7 @@ $(function(){
     image_url: $('#image-id').attr('src'),
     caption: $('#title-id').text(),
     description: $('#description-id').text(),
+    title: $('#title-id').text(),
     fb_id: 'facebook-button-or-link-id',
     fb_app_id: 'YOU FB APP ID HERE',
     tw_id: 'twitter-button-or-link-id',
