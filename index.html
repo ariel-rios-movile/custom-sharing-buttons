@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Ariel</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="share.js"></script>
+    <script>
+      $(function(){
+        share({
+          // url: window.location.href,
+          url: 'http://laslechuzas.com.ar',
+          image_url: $('#title-image').attr('src'),
+          caption: $('#title').text(),
+          description: $('#description').text(),
+          fb_id: 'facebook',
+          fb_app_id: 'YOU APP ID HERE',
+          tw_id: 'twitter',
+          gp_id: 'gplus',
+          pin_id: 'pinterest',
+        });
+      });
+    </script>
+  </head>
+  <body>
+  
+    <h1 id="title">---Title---</h1>
+  
+    <p id="description">
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+      This is the description
+    </p>
+  
+    <img src="http://lorempixel.com/100/100/abstract/" id="title-image" />
+  
+    <button id="facebook">Facebook</button>
+    <button id="twitter">Twitter</button>
+    <button id="gplus">Gplus</button>
+    <button id="pinterest">Pinterest</button>
+  </body>
+</html>
