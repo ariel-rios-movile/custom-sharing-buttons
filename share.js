@@ -1,3 +1,5 @@
+var window_props = 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600';
+
 var share_fb = function(config) {
   window.fbAsyncInit = function(){
     FB.init({
@@ -7,11 +9,12 @@ var share_fb = function(config) {
       xfbml: true
     });
   };
+
   (function() {
-  var e = document.createElement('script'); e.async = true;
-  e.src = document.location.protocol +
-  '//connect.facebook.net/en_US/all.js';
-  document.getElementById(config.fb_id).appendChild(e);
+    var e = document.createElement('script');
+    e.async = true;
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    document.getElementById(config.fb_id).appendChild(e);
   }());
 
   $('#' + config.fb_id).click(function(e){
@@ -31,14 +34,14 @@ var share_fb = function(config) {
 var share_tw = function(config) {
   $('#' + config.tw_id).click(function(){
       var url = 'https://twitter.com/intent/tweet?text='+config.caption+'&url='+encodeURIComponent(config.url);
-      window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+      window.open(url, '', window_props);
   });
 }
 
 var share_gp = function(config) {
   $('#'+config.gp_id).click(function(){
     var url = 'https://plus.google.com/share?url='+encodeURIComponent(config.url);
-    window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+    window.open(url, '', window_props);
     return false;
   });
 }
@@ -46,7 +49,7 @@ var share_gp = function(config) {
 var share_pin = function(config) {
   $('#' + config.pin_id).click(function(){
     var url = 'http://pinterest.com/pin/create/link/?url='+encodeURIComponent(config.url)+'&media='+encodeURIComponent(config.image_url)+'&description='+config.caption;
-    window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+    window.open(url, '', window_props);
     return false;
   });
 }
